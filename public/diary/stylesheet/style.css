@@ -1,0 +1,22 @@
+/* CSS Document */
+a {
+	color:#606060;
+	border:none;
+}
+
+#title {
+	margin-top:30px;
+	text-align:center;
+}
+
+#link {
+	width:400px;
+	margin:0 auto;
+	font-size:larger;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#text {
+	margin:50px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
