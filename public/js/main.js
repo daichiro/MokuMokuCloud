@@ -45,4 +45,12 @@ jQuery(function ($) {
     }, function () {
         $(this).trigger('stopRumble');
     });
+    
+    function writeAddress() {
+        var element = document.getElementById('address'),
+            pre = String.fromCharCode(109, 97, 105, 108, 58),
+            addr = String.fromCharCode(100, 97, 49, 114, 111, 64, 109, 111, 107, 117, 109, 111, 107, 117, 46, 99, 108, 111, 117, 100);
+        element.innerHTML = pre + ' ' + addr;
+    }
+    writeAddress();
 });

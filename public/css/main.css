@@ -3,14 +3,6 @@ body {
     color: #0F0F0F;
 }
 
-#title {
-    font-family: "hydrophilia-liquid",sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 46px;
-    color: #0F0F0F;
-}
-
 #subtitle {
     font-family: "purista-web",sans-serif;
     font-style: normal;
@@ -18,20 +10,8 @@ body {
     color: #0F0F0F;
 }
 
-#topIcon {
-    width: 64px;
-    height: 64px;
-}
-
 #mainFrame {
     margin: 60px 80px;
-}
-
-#items {
-    font-family: "purista-web",sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 28px;
 }
 
 #japanese {
@@ -40,39 +20,10 @@ body {
     font-weight: 400;
 }
 
-#icon {
-    width: 32px;
-    margin-right: 2px;
-    border-radius: 4px;
-}
-
-#iconFrame {
-    margin: 30px 0px;
-}
-
 #footer {
     margin-top: 40px;
 }
 
-img.kumo {
-    width: 60px;
-    margin: 0;
-    position: absolute;
-    z-index: -1;
-}
-
 a {
     color: #030303;
-}
-
-a.item:hover {
-    text-decoration: underline;
-}
-
-a.item {
-    text-decoration: none;
-}
-
-a.icon {
-    text-decoration: none;
 }
