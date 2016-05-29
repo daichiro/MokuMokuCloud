@@ -13,7 +13,7 @@ router.all(middleware: StaticFileServer())
 
 private func redirectHtml(_ name: String, _ response: RouterResponse) {
   do {
-    response.setHeader("Content-Type", value: "text/html; charset=utf-8")
+    response.headers["Content-Type"] = "text/html; charset=utf-8"
     let path = "./public/\(name).html"
     try response.status(.OK)
       .send(fileName: path)
@@ -42,7 +42,7 @@ router.all { request, response, next in
   if response.statusCode == .notFound {
     if  request.originalUrl != "/"  &&  request.originalUrl != ""  {
       do {
-        response.setHeader("Content-Type", value: "text/html; charset=utf-8")
+        response.headers["Content-Type"] = "text/html; charset=utf-8"
         let path = "./public/notFound.html"
         try response.send(fileName: path).end()
       } catch {
