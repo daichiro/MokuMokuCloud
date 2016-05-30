@@ -7,3 +7,5 @@ isExistApp=`pgrep MokuMokuCloud`
 if [[ -n \$isExistApp ]]; then
   pkill MokuMokuCloud
 fi
+swift build --clean
+rm -rf /var/www/html/MokuMokuCloud/Packages
