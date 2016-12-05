@@ -1,13 +1,10 @@
 import Kitura
-import KituraNet
-import KituraSys
-
-import LoggerAPI
 import HeliumLogger
-
-let router = Router()
+import LoggerAPI
 
 Log.logger = HeliumLogger()
+
+let router = Router()
 
 router.all(middleware: StaticFileServer())
 
@@ -40,7 +37,7 @@ router.get("/blog") { request, response, next in
 
 router.all { request, response, next in
   if response.statusCode == .notFound {
-    if  request.originalUrl != "/"  &&  request.originalUrl != ""  {
+    if  request.originalURL != "/"  &&  request.originalURL != ""  {
       do {
         response.headers["Content-Type"] = "text/html; charset=utf-8"
         let path = "./public/notFound.html"
@@ -53,5 +50,5 @@ router.all { request, response, next in
   next()
 }
 
-let server = HTTPServer.listen(port: 8090, delegate: router)
-Server.run()
+Kitura.addHTTPServer(onPort: 8090, with: router)
+Kitura.run()
