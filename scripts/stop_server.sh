@@ -1,4 +1,5 @@
 #!/bin/bash
+source ~/.bash_profile
 isExistNginx=`pgrep nginx`
 if [ -n \$isExistNginx ]; then
   service nginx stop
