@@ -35,6 +35,11 @@ router.get("/blog") { request, response, next in
   next()
 }
 
+router.get("/wallpaper") { request, response, next in
+  redirectHtml("wallpaper", response)
+  next()
+}
+
 router.all { request, response, next in
   if response.statusCode == .notFound {
     if  request.originalURL != "/"  &&  request.originalURL != ""  {
